@@ -24,6 +24,15 @@ The following changes have been made to the `ProjectSettings.cmake` file:
  - `set(ENV{BOOST__HOME} $ENV{LCG_INST_PATH}/$ENV{TDAQ_LCG_RELEASE}/Boost/1.72.0/$ENV{CMTCONFIG})`
  - `set(SERVER_LINK_DIRECTORIES $ENV{TBB__HOME}/lib $ENV{ROOT__HOME}/lib $ENV{BOOST__HOME}/lib)`
  
+# How to install OPC server 
+
+If you are working on `lxplus`, you should source setup file. Then, it easy to install the OPC-UA server. Here are the commands that you need the follow;
+
+```
+source setup.sh
+./quasar build
+```
+ 
 # How to test this OPC server
 1. Modify the bin/config.xml to describe as many RD53A modules as you want.
 ```
