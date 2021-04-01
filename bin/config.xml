@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://cern.ch/quasar/Configuration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cern.ch/quasar/Configuration ../Configuration/Configuration.xsd ">
+  <RD53A name="emu-rd53a-1" Host="pcatlidros02" CmdPort="12350" DataPort="12360" CmdElink="0" DataElink="0" >
+  </RD53A>
+</configuration>

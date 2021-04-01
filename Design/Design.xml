@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<d:design projectShortName="RD53A OPC server" xmlns:d="http://cern.ch/quasar/Design" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cern.ch/quasar/Design Design.xsd ">
+  <d:class name="RD53A">
+    <d:devicelogic></d:devicelogic>
+    <d:cachevariable name="Host" dataType="UaString" initializeWith="configuration" addressSpaceWrite="forbidden" nullPolicy="nullForbidden">
+      <d:documentation>FELIX host name</d:documentation>
+    </d:cachevariable>
+    <d:cachevariable name="CmdPort" dataType="OpcUa_UInt32" initializeWith="configuration" addressSpaceWrite="forbidden" nullPolicy="nullForbidden">
+      <d:documentation>FELIX command port</d:documentation>
+    </d:cachevariable>
+    <d:cachevariable name="DataPort" dataType="OpcUa_UInt32" initializeWith="configuration" addressSpaceWrite="forbidden" nullPolicy="nullForbidden">
+      <d:documentation>FELIX data port</d:documentation>
+    </d:cachevariable>
+    <d:cachevariable name="CmdElink" dataType="OpcUa_UInt32" initializeWith="configuration" addressSpaceWrite="forbidden" nullPolicy="nullForbidden">
+      <d:documentation>FELIX command e-link</d:documentation>
+    </d:cachevariable>
+    <d:cachevariable name="DataElink" dataType="OpcUa_UInt32" initializeWith="configuration" addressSpaceWrite="forbidden" nullPolicy="nullForbidden">
+      <d:documentation>FELIX data e-link</d:documentation>
+    </d:cachevariable>
+    <d:cachevariable name="Rad_1" dataType="OpcUa_Double" initializeWith="valueAndStatus" initialValue="0" initialStatus="OpcUa_BadWaitingForInitialData" addressSpaceWrite="forbidden" nullPolicy="nullForbidden">
+      <d:documentation>TID measured from radiation sensor 1 in Rads</d:documentation>
+    </d:cachevariable>
+    <d:cachevariable name="Rad_2" dataType="OpcUa_Double" initializeWith="valueAndStatus" initialValue="0" initialStatus="OpcUa_BadWaitingForInitialData" addressSpaceWrite="forbidden" nullPolicy="nullForbidden">
+      <d:documentation>TID measured from radiation sensor 2 in Rads</d:documentation>
+    </d:cachevariable>
+    <d:cachevariable name="Rad_3" dataType="OpcUa_Double" initializeWith="valueAndStatus" initialValue="0" initialStatus="OpcUa_BadWaitingForInitialData" addressSpaceWrite="forbidden" nullPolicy="nullForbidden">
+      <d:documentation>TID measured from radiation sensor 3 in Rads</d:documentation>
+    </d:cachevariable>
+    <d:cachevariable name="Rad_4" dataType="OpcUa_Double" initializeWith="valueAndStatus" initialValue="0" initialStatus="OpcUa_BadWaitingForInitialData" addressSpaceWrite="forbidden" nullPolicy="nullForbidden">
+      <d:documentation>TID measured from radiation sensor 4 in Rads</d:documentation>
+    </d:cachevariable>
+    <d:cachevariable name="Temp_1" dataType="OpcUa_Double" initializeWith="valueAndStatus" initialValue="22" initialStatus="OpcUa_BadWaitingForInitialData" addressSpaceWrite="forbidden" nullPolicy="nullForbidden">
+      <d:documentation>TID measured from temperature sensor 1 in degrees Celsius</d:documentation>
+    </d:cachevariable>
+    <d:cachevariable name="Temp_2" dataType="OpcUa_Double" initializeWith="valueAndStatus" initialValue="22" initialStatus="OpcUa_BadWaitingForInitialData" addressSpaceWrite="forbidden" nullPolicy="nullForbidden">
+      <d:documentation>TID measured from temperature sensor 2 in degrees Celsius</d:documentation>
+    </d:cachevariable>
+    <d:cachevariable name="Temp_3" dataType="OpcUa_Double" initializeWith="valueAndStatus" initialValue="22" initialStatus="OpcUa_BadWaitingForInitialData" addressSpaceWrite="forbidden" nullPolicy="nullForbidden">
+      <d:documentation>TID measured from temperature sensor 3 in degrees Celsius</d:documentation>
+    </d:cachevariable>
+    <d:cachevariable name="Temp_4" dataType="OpcUa_Double" initializeWith="valueAndStatus" initialValue="22" initialStatus="OpcUa_BadWaitingForInitialData" addressSpaceWrite="forbidden" nullPolicy="nullForbidden">
+      <d:documentation>TID measured from temperature sensor 4 in degrees Celsius</d:documentation>
+    </d:cachevariable>
+    <d:documentation>This server reads the four radiation and four temperature sensors on the RD53A through FELIX.
+  	The Total Ionizing Dose (TID) in Rads is measured with Bipolar Junction Transitors (BJTs),
+  	and the temperature in C is measured through Negative coeficient Thermo Couplers (NTCs).
+    </d:documentation>    	  	  			
+  </d:class>
+  <d:root>
+    <d:hasobjects instantiateUsing="configuration" class="RD53A"></d:hasobjects>
+  </d:root>
+</d:design>
